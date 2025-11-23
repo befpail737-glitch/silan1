@@ -704,3 +704,230 @@ footer .footer-bottom {
         text-align: center;
     }
 }
+
+/* ====================================
+   CONTACT PAGE STYLES
+   ==================================== */
+
+/* Contact Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Offices Container */
+.offices-container {
+    width: 100%;
+}
+
+.region-section {
+    margin-bottom: 50px;
+}
+
+.region-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Office Grid */
+.office-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Office Card */
+.office-card {
+    background: var(--white-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.office-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.office-card h3 {
+    color: var(--dark-color);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.office-address {
+    color: var(--grey-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.office-email {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 0;
+}
+
+.office-email:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Contact Sidebar */
+.contact-sidebar {
+    position: sticky;
+    top: 100px;
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    height: fit-content;
+}
+
+.contact-sidebar h2 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.sidebar-intro {
+    color: var(--grey-color);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* Phone Contacts */
+.phone-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.phone-svg-link {
+    display: block;
+    transition: var(--transition);
+}
+
+.phone-svg-link:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.contact-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* General Contact Info */
+.general-contact {
+    padding: 20px 0;
+    border-top: 2px solid rgba(0, 87, 184, 0.1);
+    border-bottom: 2px solid rgba(0, 87, 184, 0.1);
+    margin-bottom: 25px;
+}
+
+.general-contact h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.general-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.general-contact a {
+    color: var(--primary-color);
+    word-break: break-word;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.cta-box p {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.cta-box .btn {
+    background: var(--white-color);
+    color: var(--primary-color);
+    width: 100%;
+    padding: 12px;
+}
+
+.cta-box .btn:hover {
+    background: var(--light-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-sidebar {
+        position: relative;
+        top: 0;
+    }
+    
+    .office-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .region-title {
+        font-size: 1.5rem;
+    }
+    
+    .office-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .office-card {
+        padding: 20px;
+    }
+    
+    .contact-sidebar {
+        padding: 25px;
+    }
+    
+    .phone-contacts {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .region-title {
+        font-size: 1.3rem;
+    }
+    
+    .office-card h3 {
+        font-size: 1.1rem;
+    }
+}
