@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPM Design Guide | Silan Distributor</title>
+    <meta name="description" content="Best practices for designing with Silan Intelligent Power Modules (IPMs), including layout, thermal management, and protection.">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "IPM Design & Application Guide",
+      "author": {
+        "@type": "Person",
+        "name": "Jane Smith"
+      },
+      "datePublished": "2025-11-20",
+      "publisher": {
+        "@type": "Organization",
+        "name": "LITONG"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="Silan Distributor Logo">
+                    <span>LITONG</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../products/">Products</a></li>
+                    <li><a href="../solutions/">Solutions</a></li>
+                    <li><a href="index.html" class="active">Support</a></li>
+                    <li><a href="../news/">News</a></li>
+                    <li><a href="../about/">About Us</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <a href="../contact/" class="btn">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>IPM Design & Application Guide</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html">Support</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">IPM Design Guide</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="article-page">
+            <div class="container">
+                <div class="article-content">
+                    <p class="article-meta">Published on November 20, 2025 by <a href="#">Jane Smith, FAE</a></p>
+                    
+                    <p>Silan's Intelligent Power Modules (IPMs) simplify power stage design, but proper implementation is key to achieving maximum performance and reliability. This guide covers the essential aspects of designing with IPMs.</p>
+
+                    <h2>1. PCB Layout Considerations</h2>
+                    <p>Good PCB layout is crucial for minimizing noise and parasitic inductance.</p>
+                    <ul>
+                        <li><strong>Decoupling Capacitors:</strong> Place high-frequency ceramic capacitors as close as possible to the IPM's power and ground pins.</li>
+                        <li><strong>Gate Drive Traces:</strong> Keep the traces between the MCU and the IPM's control inputs short and wide.</li>
+                        <li><strong>Power Traces:</strong> Use wide, heavy copper traces for the high-current paths to minimize voltage drop and heat generation.</li>
+                    </ul>
+
+                    <h2>2. Thermal Management</h2>
+                    <p>Properly managing heat is the most important factor in ensuring IPM reliability. The IPM must be mounted to a heatsink capable of dissipating the heat generated during operation. Use a high-quality thermal interface material (TIM) and ensure proper mounting pressure.</p>
+
+                    <h2>3. Understanding Protection Features</h2>
+                    <p>IPMs integrate various protection features. It's important to understand how they work:</p>
+                    <ul>
+                        <li><strong>Under-Voltage Lockout (UVLO):</strong> Prevents the IPM from operating with insufficient gate voltage, which could cause damage.</li>
+                        <li><strong>Short-Circuit Protection (SCP):</strong> Detects excessive current and safely shuts down the IPM.</li>
+                        <li><strong>Over-Temperature Protection (OTP):</strong> An internal sensor shuts the IPM down if it exceeds a safe operating temperature.</li>
+                    </ul>
+
+                </div>
+                <div class="article-sidebar">
+                    <div class="author-bio">
+                        <h3>About the Author</h3>
+                        <p><strong>Jane Smith</strong> is a Field Application Engineer at LITONG, specializing in power electronics and motor control applications.</p>
+                    </div>
+                    <div class="related-articles">
+                        <h3>Related Articles</h3>
+                        <ul>
+                            <li><a href="mcu-selection-guide.html">How to Choose the Right Silan MCU</a></li>
+                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET: A Practical Selection Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3>LITONG</h3>
+                    <p>Your authorized Silan distributor for high-quality semiconductor products and expert technical support.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../products/">Products</a></li>
+                        <li><a href="../solutions/">Solutions</a></li>
+                        <li><a href="index.html">Support</a></li>
+                        <li><a href="../about/">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: sales@silan-distributor.com</p>
+                    <p>Phone: +1-234-567-8900</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

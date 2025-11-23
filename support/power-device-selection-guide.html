@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGBT vs. MOSFET Guide | Silan Distributor</title>
+    <meta name="description" content="A practical guide to choosing between IGBTs and MOSFETs for your power switching application, with examples using Silan products.">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "IGBT vs. MOSFET: A Practical Selection Guide",
+      "author": {
+        "@type": "Person",
+        "name": "John Doe"
+      },
+      "datePublished": "2025-11-18",
+      "publisher": {
+        "@type": "Organization",
+        "name": "LITONG"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="Silan Distributor Logo">
+                    <span>LITONG</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../products/">Products</a></li>
+                    <li><a href="../solutions/">Solutions</a></li>
+                    <li><a href="index.html" class="active">Support</a></li>
+                    <li><a href="../news/">News</a></li>
+                    <li><a href="../about/">About Us</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <a href="../contact/" class="btn">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>IGBT vs. MOSFET: A Practical Selection Guide</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html">Support</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">IGBT vs. MOSFET Guide</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="article-page">
+            <div class="container">
+                <div class="article-content">
+                    <p class="article-meta">Published on November 18, 2025 by <a href="#">John Doe, FAE</a></p>
+                    
+                    <p>IGBTs and MOSFETs are the two most common power switches, but they have different characteristics. Choosing the right one is key to an efficient and reliable design.</p>
+
+                    <h2>1. Operating Principle</h2>
+                    <p>A MOSFET is a voltage-controlled device that behaves like a resistor when on. An IGBT combines the simple gate drive of a MOSFET with the high-current and low-saturation-voltage capability of a bipolar transistor.</p>
+                    
+                    <h2>2. Switching Speed</h2>
+                    <p><strong>MOSFETs are the clear winners here.</strong> They can switch at frequencies of several hundred kHz, or even into the MHz range. IGBTs are generally limited to frequencies below 100 kHz due to their "tail current" during turn-off.</p>
+
+                    <h2>3. Voltage and Current Ratings</h2>
+                    <p><strong>IGBTs typically handle higher voltages and currents.</strong> While high-voltage MOSFETs exist, IGBTs are generally more cost-effective for applications above 600V and tens of amps.</p>
+
+                    <h2>4. Conduction Loss</h2>
+                    <p>At low currents, MOSFETs have lower conduction losses due to their resistive nature (Rds(on)). At high currents, the fixed saturation voltage (Vce(sat)) of an IGBT results in lower conduction losses.</p>
+
+                    <h2>Conclusion: Which to Choose?</h2>
+                    <ul>
+                        <li><strong>Use a MOSFET for:</strong> High-frequency applications (like switching power supplies) and low-voltage applications (below 200V).</li>
+                        <li><strong>Use an IGBT for:</strong> High-power, high-voltage, lower-frequency applications (like motor drives and solar inverters).</li>
+                    </ul>
+
+                </div>
+                <div class="article-sidebar">
+                    <div class="author-bio">
+                        <h3>About the Author</h3>
+                        <p><strong>John Doe</strong> is a Senior Field Application Engineer at LITONG with over 10 years of experience in embedded systems design and MCU applications.</p>
+                    </div>
+                    <div class="related-articles">
+                        <h3>Related Articles</h3>
+                        <ul>
+                            <li><a href="mcu-selection-guide.html">How to Choose the Right Silan MCU</a></li>
+                            <li><a href="ipm-design-guide.html">IPM Design & Application Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3>LITONG</h3>
+                    <p>Your authorized Silan distributor for high-quality semiconductor products and expert technical support.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../products/">Products</a></li>
+                        <li><a href="../solutions/">Solutions</a></li>
+                        <li><a href="index.html">Support</a></li>
+                        <li><a href="../about/">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: sales@silan-distributor.com</p>
+                    <p>Phone: +1-234-567-8900</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

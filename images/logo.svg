@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+    <style>
+        .text {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            fill: #1a2333;
+        }
+    </style>
+    <text x="10" y="45" class="text">LITONG</text>
+</svg>
