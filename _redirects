@@ -1,0 +1,16 @@
+# Cloudflare Pages - URL Redirect Configuration
+# Handle directory trailing slashes
+
+# Redirect non-trailing slash to trailing slash for directories
+/products /products/ 301
+/about /about/ 301
+/solutions /solutions/ 301
+/support /support/ 301
+/news /news/ 301
+/contact /contact/ 301
+
+# Handle common URL patterns
+/index.html / 301
+
+# SPA-style fallback (optional, for future enhancements)
+# Uncomment if needed: /* /index.html 200
