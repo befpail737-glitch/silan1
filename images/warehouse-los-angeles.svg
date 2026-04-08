@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="building" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5D6D7E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="door" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C3E50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A252F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect x="0" y="0" width="600" height="250" fill="url(#sky)"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="250" width="600" height="150" fill="#95A5A6"/>
+  
+  <!-- Warehouse Building -->
+  <rect x="100" y="120" width="400" height="180" fill="url(#building)"/>
+  
+  <!-- Roof -->
+  <polygon points="80,120 300,60 520,120" fill="#2C3E50"/>
+  
+  <!-- Loading Docks -->
+  <rect x="130" y="200" width="80" height="100" fill="url(#door)"/>
+  <rect x="230" y="200" width="80" height="100" fill="url(#door)"/>
+  <rect x="330" y="200" width="80" height="100" fill="url(#door)"/>
+  <rect x="430" y="200" width="80" height="100" fill="url(#door)"/>
+  
+  <!-- Dock Doors (Open) -->
+  <rect x="140" y="210" width="60" height="80" fill="#1A1A2E"/>
+  <rect x="240" y="210" width="60" height="80" fill="#1A1A2E"/>
+  <rect x="340" y="210" width="60" height="80" fill="#1A1A2E"/>
+  <rect x="440" y="210" width="60" height="80" fill="#1A1A2E"/>
+  
+  <!-- Company Sign -->
+  <rect x="200" y="140" width="200" height="40" fill="#1A5276" rx="3"/>
+  <text x="300" y="165" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">LITONG LOS ANGELES</text>
+  
+  <!-- Windows -->
+  <rect x="130" y="150" width="40" height="30" fill="#87CEEB" stroke="#2C3E50" stroke-width="2"/>
+  <rect x="190" y="150" width="40" height="30" fill="#87CEEB" stroke="#2C3E50" stroke-width="2"/>
+  
+  <!-- Trucks -->
+  <rect x="50" y="280" width="120" height="60" fill="#E74C3C" rx="5"/>
+  <rect x="150" y="290" width="40" height="40" fill="#F39C12" rx="5"/>
+  <circle cx="70" cy="340" r="15" fill="#2C3E50"/>
+  <circle cx="130" cy="340" r="15" fill="#2C3E50"/>
+  <text x="110" y="315" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">DELIVERY</text>
+  
+  <!-- Another Truck -->
+  <rect x="450" y="280" width="120" height="60" fill="#27AE60" rx="5"/>
+  <rect x="550" y="290" width="40" height="40" fill="#F39C12" rx="5"/>
+  <circle cx="470" cy="340" r="15" fill="#2C3E50"/>
+  <circle cx="530" cy="340" r="15" fill="#2C3E50"/>
+  <text x="510" y="315" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">SHIPPING</text>
+  
+  <!-- Pallets -->
+  <rect x="320" y="310" width="30" height="25" fill="#8B4513"/>
+  <rect x="360" y="310" width="30" height="25" fill="#8B4513"/>
+  <rect x="400" y="310" width="30" height="25" fill="#8B4513"/>
+  
+  <!-- Location Pin -->
+  <circle cx="300" cy="90" r="20" fill="#E74C3C"/>
+  <circle cx="300" cy="85" r="8" fill="white"/>
+  <text x="300" y="130" text-anchor="middle" fill="#2C3E50" font-family="Arial, sans-serif" font-size="12" font-weight="bold">LOS ANGELES, CA</text>
+  
+  <!-- Sun -->
+  <circle cx="520" y="60" r="30" fill="#F1C40F"/>
+  <line x1="520" y1="20" x2="520" y2="10" stroke="#F1C40F" stroke-width="3"/>
+  <line x1="520" y1="100" x2="520" y2="110" stroke="#F1C40F" stroke-width="3"/>
+  <line x1="480" y1="60" x2="470" y2="60" stroke="#F1C40F" stroke-width="3"/>
+  <line x1="560" y1="60" x2="570" y2="60" stroke="#F1C40F" stroke-width="3"/>
+</svg>

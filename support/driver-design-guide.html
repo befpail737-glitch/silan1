@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate Driver Design Guide | Silan Distributor</title>
+    <meta name="description" content="A technical guide to designing robust and efficient gate driver circuits for high-speed switching of MOSFETs and IGBTs.">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Gate Driver Design for High-Speed Switching",
+      "author": {
+        "@type": "Person",
+        "name": "Jane Smith"
+      },
+      "datePublished": "2025-11-12",
+      "publisher": {
+        "@type": "Organization",
+        "name": "LITONG"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="Silan Distributor Logo">
+                    <span>LITONG</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../products/">Products</a></li>
+                    <li><a href="../solutions/">Solutions</a></li>
+                    <li><a href="index.html" class="active">Support</a></li>
+                    <li><a href="../news/">News</a></li>
+                    <li><a href="../about/">About Us</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <a href="../contact/" class="btn">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Gate Driver Design for High-Speed Switching</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html">Support</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gate Driver Design Guide</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="article-page">
+            <div class="container">
+                <div class="article-content">
+                    <p class="article-meta">Published on November 12, 2025 by <a href="#">Jane Smith, FAE</a></p>
+                    
+                    <p>A well-designed gate driver circuit is essential for achieving fast, efficient, and reliable switching of power MOSFETs and IGBTs. This guide covers key principles for optimizing your gate drive design.</p>
+
+                    <h2>1. Minimizing Gate Loop Inductance</h2>
+                    <p>The most critical aspect of gate driver layout is minimizing the inductance of the loop formed by the driver output, the transistor gate, and the return path. High inductance in this loop will cause ringing and voltage overshoots.</p>
+                    <ul>
+                        <li>Keep the driver IC as close as possible to the power transistor.</li>
+                        <li>Use wide, parallel traces for the drive and return paths to maximize mutual inductance and reduce total loop inductance.</li>
+                        <li>Place a low-ESR ceramic capacitor right at the VCC pin of the driver IC.</li>
+                    </ul>
+
+                    <h2>2. Selecting the Gate Resistor</h2>
+                    <p>The gate resistor controls the turn-on and turn-off speed of the transistor. A smaller resistor allows for faster switching, but increases the risk of ringing. A larger resistor provides damping but increases switching losses.</p>
+                    <p>Often, separate resistors are used for turn-on (Rg(on)) and turn-off (Rg(off)). A smaller Rg(off) allows for a rapid turn-off, which is critical for preventing shoot-through in half-bridge configurations.</p>
+
+                    <h2>3. The Miller Plateau</h2>
+                    <p>During the switching transition, the gate-to-drain capacitance (the "Miller" capacitance) must be charged or discharged. This causes a plateau in the gate voltage waveform. The gate driver must be able to source or sink enough current to get through this plateau region quickly to minimize switching losses.</p>
+
+                </div>
+                <div class="article-sidebar">
+                    <div class="author-bio">
+                        <h3>About the Author</h3>
+                        <p><strong>Jane Smith</strong> is a Field Application Engineer at LITONG, specializing in power electronics and motor control applications.</p>
+                    </div>
+                    <div class="related-articles">
+                        <h3>Related Articles</h3>
+                        <ul>
+                            <li><a href="ipm-design-guide.html">IPM Design & Application Guide</a></li>
+                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET: A Practical Selection Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3>LITONG</h3>
+                    <p>Your authorized Silan distributor for high-quality semiconductor products and expert technical support.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../products/">Products</a></li>
+                        <li><a href="../solutions/">Solutions</a></li>
+                        <li><a href="index.html">Support</a></li>
+                        <li><a href="../about/">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: sales@silan-distributor.com</p>
+                    <p>Phone: +1-234-567-8900</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

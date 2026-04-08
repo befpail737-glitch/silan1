@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="certBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Certificate Background -->
+  <rect x="20" y="20" width="760" height="560" rx="10" fill="url(#certBg)" stroke="url(#goldBorder)" stroke-width="8" filter="url(#shadow)"/>
+  
+  <!-- Inner Border -->
+  <rect x="40" y="40" width="720" height="520" rx="5" fill="none" stroke="#d4af37" stroke-width="2"/>
+  
+  <!-- Corner Decorations -->
+  <path d="M40 80 L40 40 L80 40" fill="none" stroke="#d4af37" stroke-width="3"/>
+  <path d="M720 40 L760 40 L760 80" fill="none" stroke="#d4af37" stroke-width="3"/>
+  <path d="M40 520 L40 560 L80 560" fill="none" stroke="#d4af37" stroke-width="3"/>
+  <path d="M720 560 L760 560 L760 520" fill="none" stroke="#d4af37" stroke-width="3"/>
+  
+  <!-- Silan Logo Placeholder -->
+  <circle cx="400" cy="100" r="40" fill="#1a5276"/>
+  <text x="400" y="108" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">S</text>
+  
+  <!-- Title -->
+  <text x="400" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#2c3e50">CERTIFICATE OF AUTHORIZATION</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d">OFFICIAL TIER-1 DISTRIBUTOR</text>
+  
+  <!-- Decorative Line -->
+  <line x1="250" y1="220" x2="550" y2="220" stroke="#d4af37" stroke-width="2"/>
+  
+  <!-- Main Content -->
+  <text x="400" y="260" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#2c3e50">This certifies that</text>
+  
+  <!-- Company Name -->
+  <text x="400" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#1a5276">LITONG INTERNATIONAL</text>
+  <text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d">Trading Co., Ltd.</text>
+  
+  <!-- Description -->
+  <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">is an officially authorized Tier-1 Distributor of</text>
+  <text x="400" y="395" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#1a5276">Silan Microelectronics Corp.</text>
+  <text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">products for global distribution</text>
+  
+  <!-- Authorization Details -->
+  <rect x="200" y="440" width="400" height="60" rx="5" fill="#f39c12" fill-opacity="0.1" stroke="#f39c12" stroke-width="1"/>
+  <text x="400" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Authorization Number</text>
+  <text x="400" y="480" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#e74c3c">SL-DIST-2024-LIT-001</text>
+  
+  <!-- Date -->
+  <text x="400" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Valid through: December 31, 2026</text>
+  
+  <!-- Signatures -->
+  <line x1="150" y1="550" x2="280" y2="550" stroke="#2c3e50" stroke-width="1"/>
+  <text x="215" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Authorized Signature</text>
+  
+  <line x1="520" y1="550" x2="650" y2="550" stroke="#2c3e50" stroke-width="1"/>
+  <text x="585" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Date of Issue</text>
+  
+  <!-- Seal -->
+  <circle cx="680" cy="480" r="35" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="680" cy="480" r="30" fill="none" stroke="#c0392b" stroke-width="1"/>
+  <text x="680" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#c0392b">OFFICIAL</text>
+  <text x="680" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#c0392b">SEAL</text>
+</svg>

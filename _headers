@@ -1,0 +1,32 @@
+# Cloudflare Pages - Custom HTTP Headers
+# Security and Performance Headers for silan.elec-distributor.com
+
+# Apply to all pages
+/*
+  # Security Headers
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  
+  # Cache Control for HTML (no cache, always revalidate)
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS and JS files - cache for 1 year
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - cache for 1 year
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Sitemap and robots.txt - cache for 1 day
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=86400

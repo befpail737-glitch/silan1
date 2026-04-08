@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="officeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Office Background -->
+  <rect x="0" y="0" width="600" height="400" fill="url(#officeBg)"/>
+  
+  <!-- Window -->
+  <rect x="400" y="50" width="150" height="120" fill="#87ceeb" stroke="#2c3e50" stroke-width="3"/>
+  <line x1="475" y1="50" x2="475" y2="170" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="400" y1="110" x2="550" y2="110" stroke="#2c3e50" stroke-width="2"/>
+  
+  <!-- Desk -->
+  <rect x="50" y="250" width="500" height="20" fill="#8b4513"/>
+  <rect x="50" y="270" width="20" height="100" fill="#8b4513"/>
+  <rect x="530" y="270" width="20" height="100" fill="#8b4513"/>
+  
+  <!-- Team Member 1 -->
+  <circle cx="150" cy="180" r="25" fill="#f39c12"/>
+  <rect x="130" y="210" width="40" height="50" fill="#2c3e50"/>
+  <text x="150" y="280" text-anchor="middle" fill="#2c3e50" font-family="Arial, sans-serif" font-size="10">John - FAE Lead</text>
+  
+  <!-- Team Member 2 -->
+  <circle cx="250" cy="180" r="25" fill="#f5b7b1"/>
+  <rect x="230" y="210" width="40" height="50" fill="#e74c3c"/>
+  <text x="250" y="280" text-anchor="middle" fill="#2c3e50" font-family="Arial, sans-serif" font-size="10">Sarah - Sales</text>
+  
+  <!-- Team Member 3 -->
+  <circle cx="350" cy="180" r="25" fill="#d5dbdb"/>
+  <rect x="330" y="210" width="40" height="50" fill="#27ae60"/>
+  <text x="350" y="280" text-anchor="middle" fill="#2c3e50" font-family="Arial, sans-serif" font-size="10">Mike - Support</text>
+  
+  <!-- Computer Monitors -->
+  <rect x="120" y="220" width="30" height="25" fill="#2c3e50"/>
+  <rect x="125" y="225" width="20" height="15" fill="#3498db"/>
+  
+  <rect x="220" y="220" width="30" height="25" fill="#2c3e50"/>
+  <rect x="225" y="225" width="20" height="15" fill="#3498db"/>
+  
+  <rect x="320" y="220" width="30" height="25" fill="#2c3e50"/>
+  <rect x="325" y="225" width="20" height="15" fill="#3498db"/>
+  
+  <!-- Logo on Wall -->
+  <circle cx="500" cy="280" r="30" fill="#1a5276"/>
+  <text x="500" y="285" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">LITONG</text>
+  
+  <!-- Title -->
+  <text x="300" y="380" text-anchor="middle" fill="#2c3e50" font-family="Arial, sans-serif" font-size="14" font-weight="bold">LOS ANGELES FAE TEAM</text>
+</svg>
