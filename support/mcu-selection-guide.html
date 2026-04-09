@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCU Selection Guide | Silan Distributor</title>
     <meta name="description" content="An in-depth guide on how to select the right Silan MCU for your application, covering performance, peripherals, power, and cost.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <script type="application/ld+json">
     {
@@ -33,6 +36,11 @@
                     <span>LITONG</span>
                 </a>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -45,7 +53,7 @@
                 </ul>
             </nav>
             <div class="header-contact">
-                <a href="../contact/" class="btn">Get a Quote</a>
+                <a href="../contact/" class="btn btn-primary">Get a Quote</a>
             </div>
         </div>
     </header>
@@ -64,26 +72,68 @@
             </div>
         </section>
 
-        <section class="article-page">
+        <section class="support-detail-page">
             <div class="container">
-                <div class="article-content">
-                    <p class="article-meta">Published on November 23, 2025 by <a href="#">John Doe, FAE</a></p>
+                <div class="support-content">
+                    <div class="article-meta" style="margin-bottom: var(--space-6); color: var(--gray-500); font-size: var(--text-sm);">
+                        Published on November 23, 2025 by <a href="../contact/" style="color: var(--primary-500);">John Doe, FAE</a>
+                    </div>
                     
-                    <p>Selecting the right microcontroller (MCU) is one of the most critical decisions in an embedded system design. It impacts performance, power consumption, cost, and time-to-market. This guide will help you navigate Silan's diverse MCU portfolio to find the perfect fit for your project.</p>
+                    <p style="font-size: var(--text-lg); color: var(--gray-600); margin-bottom: var(--space-8);">Selecting the right microcontroller (MCU) is one of the most critical decisions in an embedded system design. It impacts performance, power consumption, cost, and time-to-market. This guide will help you navigate Silan's diverse MCU portfolio to find the perfect fit for your project.</p>
 
                     <h2>1. Core Performance: 8-bit vs. 32-bit</h2>
                     <p>The first major decision is the core. Silan offers both 8-bit (SC8F series) and 32-bit (SC32F series, based on ARM Cortex-M) MCUs.</p>
-                    <ul>
-                        <li><strong>8-bit MCUs:</strong> Ideal for simple, cost-sensitive applications like remote controls, small appliances, and basic sensor nodes. They are easy to use and offer very low power consumption.</li>
-                        <li><strong>32-bit MCUs:</strong> Necessary for applications requiring more computational power, such as motor control, complex communication protocols (USB, Ethernet), or graphical user interfaces.</li>
-                    </ul>
+                    
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <h4>8-bit MCUs</h4>
+                            <p>Ideal for simple, cost-sensitive applications like remote controls, small appliances, and basic sensor nodes. They are easy to use and offer very low power consumption.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>32-bit MCUs</h4>
+                            <p>Necessary for applications requiring more computational power, such as motor control, complex communication protocols (USB, Ethernet), or graphical user interfaces.</p>
+                        </div>
+                    </div>
 
                     <h2>2. Memory Requirements: Flash and RAM</h2>
                     <p>Ensure the MCU has enough Flash memory for your application code and any libraries you might use. RAM is critical for storing variables and managing the application's state. Always plan for future feature additions by choosing an MCU with slightly more memory than you currently need.</p>
 
+                    <table class="parameter-table">
+                        <thead>
+                            <tr>
+                                <th>Application Type</th>
+                                <th>Flash Memory</th>
+                                <th>RAM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Simple sensor node</td>
+                                <td>8-32 KB</td>
+                                <td>1-4 KB</td>
+                            </tr>
+                            <tr>
+                                <td>Home appliance</td>
+                                <td>32-128 KB</td>
+                                <td>4-16 KB</td>
+                            </tr>
+                            <tr>
+                                <td>Industrial control</td>
+                                <td>128-512 KB</td>
+                                <td>16-64 KB</td>
+                            </tr>
+                            <tr>
+                                <td>Complex GUI application</td>
+                                <td>512 KB+</td>
+                                <td>64 KB+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <h2>3. Peripherals and Integration</h2>
                     <p>Integrated peripherals reduce external component count, saving cost and board space. Look for MCUs with the peripherals your application requires:</p>
-                    <ul>
+                    
+                    <ul class="check-list">
                         <li><strong>Communication:</strong> UART, SPI, I2C for connecting to sensors and other ICs.</li>
                         <li><strong>Analog:</strong> ADCs for reading sensors, DACs for generating analog signals, and comparators.</li>
                         <li><strong>Timers:</strong> PWM timers for motor control and LED dimming, and general-purpose timers for scheduling tasks.</li>
@@ -92,18 +142,45 @@
                     <h2>4. Power Consumption</h2>
                     <p>For battery-powered devices, power consumption is paramount. Look at the MCU's active mode current, as well as its various sleep and deep-sleep mode currents. Silan offers ultra-low-power options in both their 8-bit and 32-bit families.</p>
 
+                    <h2>5. Selection Checklist</h2>
+                    <ol class="step-list">
+                        <li>
+                            <strong>Define Performance Requirements</strong>
+                            <span>Determine if 8-bit or 32-bit architecture is needed based on computational demands.</span>
+                        </li>
+                        <li>
+                            <strong>Calculate Memory Needs</strong>
+                            <span>Estimate Flash and RAM requirements with 20-30% headroom for future updates.</span>
+                        </li>
+                        <li>
+                            <strong>List Required Peripherals</strong>
+                            <span>Document all communication interfaces, analog channels, and timer requirements.</span>
+                        </li>
+                        <li>
+                            <strong>Evaluate Power Budget</strong>
+                            <span>For battery applications, calculate acceptable current consumption in active and sleep modes.</span>
+                        </li>
+                        <li>
+                            <strong>Consider Development Support</strong>
+                            <span>Ensure evaluation boards, software libraries, and technical documentation are available.</span>
+                        </li>
+                    </ol>
+
                 </div>
-                <div class="article-sidebar">
-                    <div class="author-bio">
-                        <h3>About the Author</h3>
-                        <p><strong>John Doe</strong> is a Senior Field Application Engineer at LITONG with over 10 years of experience in embedded systems design and MCU applications.</p>
-                    </div>
-                    <div class="related-articles">
-                        <h3>Related Articles</h3>
+                <div class="support-sidebar">
+                    <div class="support-nav-box">
+                        <h3>Related Guides</h3>
                         <ul>
                             <li><a href="ipm-design-guide.html">IPM Design & Application Guide</a></li>
-                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET: A Practical Selection Guide</a></li>
+                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET Selection</a></li>
+                            <li><a href="driver-design-guide.html">Gate Driver Design Guide</a></li>
+                            <li><a href="mems-integration-guide.html">MEMS Integration Guide</a></li>
                         </ul>
+                    </div>
+                    <div class="support-cta-box">
+                        <h3>Need Help?</h3>
+                        <p>Our FAE team can help you select the perfect MCU for your application.</p>
+                        <a href="../contact/" class="btn">Contact Support</a>
                     </div>
                 </div>
             </div>
@@ -126,14 +203,27 @@
                         <li><a href="../about/">About Us</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="mcu-selection-guide.html">MCU Guide</a></li>
+                        <li><a href="ipm-design-guide.html">IPM Design</a></li>
+                        <li><a href="power-device-selection-guide.html">Power Device Guide</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
                     <p>Email: sales@silan-distributor.com</p>
-                    <p>Phone: +1-234-567-8900</p>
+                    <p>Phone: +86-755-XXXX-XXXX</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>

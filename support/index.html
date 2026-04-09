@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Support - Silan Distributor</title>
-    <meta name="description" content="Find technical articles, application notes, selection guides, and troubleshooting tips for Silan semiconductor products.">
-    <meta name="keywords" content="Silan technical support, application notes, selection guide, FAE support">
+    <title>Support - Technical Resources & FAE Services | LITONG</title>
+    <meta name="description" content="Access Silan technical resources, datasheets, application notes, and local FAE support. Our engineering team is ready to help with your design challenges.">
+    <meta name="keywords" content="Silan support, technical resources, FAE support, datasheets, application notes, design support">
+    <link rel="canonical" href="https://silan.elec-distributor.com/support/">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Silan Technical Support & Resources",
+      "description": "Technical resources and support for Silan semiconductor products",
+      "url": "https://silan.elec-distributor.com/support/",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Technical Resources",
+            "url": "https://silan.elec-distributor.com/support/resources.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAE Support",
+            "url": "https://silan.elec-distributor.com/support/fae.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Sample Request",
+            "url": "https://silan.elec-distributor.com/support/sample-request.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Quality Assurance",
+            "url": "https://silan.elec-distributor.com/support/quality.html"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -18,6 +65,11 @@
                     <span>LITONG</span>
                 </a>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -30,15 +82,16 @@
                 </ul>
             </nav>
             <div class="header-contact">
-                <a href="../contact/" class="btn">Get a Quote</a>
+                <a href="../contact/" class="btn btn-primary btn-sm">Get a Quote</a>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1>Technical Support</h1>
+                <h1>Technical Support Center</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
@@ -48,47 +101,183 @@
             </div>
         </section>
 
-        <section class="support-listing">
+        <!-- Support Options -->
+        <section class="support-options">
             <div class="container">
-                <h2>Articles & Guides</h2>
-                <div class="article-list">
-                    <article class="article-item">
-                        <h3><a href="mcu-selection-guide.html">How to Choose the Right Silan MCU for Your Project</a></h3>
-                        <p class="article-meta">Category: <a href="#">Selection Guides</a> | Author: <a href="#">John Doe, FAE</a></p>
-                        <p>This guide walks you through the key considerations when selecting a microcontroller, from core performance to peripheral integration and power consumption.</p>
-                        <a href="mcu-selection-guide.html" class="read-more">Read More</a>
-                    </article>
-                    <article class="article-item">
-                        <h3><a href="ipm-design-guide.html">IPM Design & Application Guide</a></h3>
-                        <p class="article-meta">Category: <a href="#">Application Notes</a> | Author: <a href="#">Jane Smith, FAE</a></p>
-                        <p>Learn about best practices for PCB layout, thermal management, and protection circuits when designing with Silan's Intelligent Power Modules (IPMs).</p>
-                        <a href="ipm-design-guide.html" class="read-more">Read More</a>
-                    </article>
-                    <article class="article-item">
-                        <h3><a href="power-device-selection-guide.html">IGBT vs. MOSFET: A Practical Selection Guide</a></h3>
-                        <p class="article-meta">Category: <a href="#">Selection Guides</a> | Author: <a href="#">John Doe, FAE</a></p>
-                        <p>A deep dive into the characteristics of IGBTs and MOSFETs, helping you decide which technology is better suited for your high-power switching application.</p>
-                        <a href="power-device-selection-guide.html" class="read-more">Read More</a>
-                    </article>
-                    <article class="article-item">
-                        <h3><a href="mems-integration-guide.html">Integrating MEMS Sensors: Avoiding Common Pitfalls</a></h3>
-                        <p class="article-meta">Category: <a href="#">Application Notes</a> | Author: <a href="#">Emily White, FAE</a></p>
-                        <p>This article covers common challenges in MEMS sensor integration, including mechanical stress, calibration, and data filtering, with practical solutions.</p>
-                        <a href="mems-integration-guide.html" class="read-more">Read More</a>
-                    </article>
-                    <article class="article-item">
-                        <h3><a href="driver-design-guide.html">Gate Driver Design for High-Speed Switching</a></h3>
-                        <p class="article-meta">Category: <a href="#">Problem Solving</a> | Author: <a href="#">Jane Smith, FAE</a></p>
-                        <p>Explore techniques for optimizing your gate driver circuit to achieve fast, clean switching transitions while minimizing ringing and EMI.</p>
-                        <a href="driver-design-guide.html" class="read-more">Read More</a>
-                    </article>
+                <div class="section-header">
+                    <h2>How Can We Help?</h2>
+                    <p class="section-intro">Access comprehensive technical resources, request samples, or connect with our local FAE team for personalized support.</p>
+                </div>
+
+                <div class="support-grid">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3>Technical Resources</h3>
+                        <p>Download datasheets, application notes, reference designs, and other technical documentation for Silan products.</p>
+                        <ul class="support-features">
+                            <li>Product datasheets</li>
+                            <li>Application notes</li>
+                            <li>Reference designs</li>
+                            <li>Evaluation kits</li>
+                        </ul>
+                        <a href="resources.html" class="btn btn-primary">Access Resources</a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                <path d="M9 9h6M9 13h6"/>
+                            </svg>
+                        </div>
+                        <h3>FAE Support</h3>
+                        <p>Get personalized assistance from our Field Application Engineers. Local support in your timezone and language.</p>
+                        <ul class="support-features">
+                            <li>Design consultation</li>
+                            <li>Technical troubleshooting</li>
+                            <li>Product selection guidance</li>
+                            <li>Local language support</li>
+                        </ul>
+                        <a href="fae.html" class="btn btn-primary">Contact FAE Team</a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Sample Request</h3>
+                        <p>Request free samples for your prototyping and evaluation needs. Fast delivery from local warehouses.</p>
+                        <ul class="support-features">
+                            <li>Free samples available</li>
+                            <li>Fast local delivery</li>
+                            <li>Evaluation kits</li>
+                            <li>Prototype support</li>
+                        </ul>
+                        <a href="sample-request.html" class="btn btn-primary">Request Samples</a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3>Quality Assurance</h3>
+                        <p>Learn about our quality control processes, certifications, and counterfeit prevention measures.</p>
+                        <ul class="support-features">
+                            <li>ISO 9001:2015 certified</li>
+                            <li>100% authentic guarantee</li>
+                            <li>Traceability documentation</li>
+                            <li>RoHS/REACH compliant</li>
+                        </ul>
+                        <a href="quality.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact -->
+        <section class="quick-contact">
+            <div class="container">
+                <div class="contact-grid-simple">
+                    <div class="contact-info-box">
+                        <h3>Need Immediate Assistance?</h3>
+                        <p>Our technical support team is available to help you with any questions or challenges.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <div>
+                                    <strong>Email Support</strong>
+                                    <a href="mailto:support@silan-distributor.com">support@silan-distributor.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <div>
+                                    <strong>Phone Support</strong>
+                                    <a href="tel:+12345678900">+1-234-567-8900</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <div>
+                                    <strong>Response Time</strong>
+                                    <span>Within 24 hours</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-cta-box">
+                        <h3>Get Started Today</h3>
+                        <p>Contact us for personalized support and discover how we can help with your project.</p>
+                        <a href="../contact/" class="btn btn-primary btn-lg">Contact Us</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <!-- Footer content is the same as index.html -->
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3>LITONG</h3>
+                    <p>Your authorized Silan distributor for high-quality semiconductor products and expert technical support. Local warehouses in 12 countries.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../products/">Products</a></li>
+                        <li><a href="../solutions/">Solutions</a></li>
+                        <li><a href="index.html">Support</a></li>
+                        <li><a href="../about/">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../news/">News & Updates</a></li>
+                        <li><a href="../about/customer-stories.html">Customer Stories</a></li>
+                        <li><a href="../about/authorization.html">Authorization</a></li>
+                        <li><a href="../sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:sales@silan-distributor.com">sales@silan-distributor.com</a></p>
+                    <p>Phone: <a href="tel:+12345678900">+1-234-567-8900</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../about/authorization.html">Authorization</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>

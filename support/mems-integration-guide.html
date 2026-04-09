@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEMS Integration Guide | Silan Distributor</title>
     <meta name="description" content="A guide to integrating MEMS sensors, covering topics like PCB layout, mechanical stress, and data filtering to ensure accurate readings.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <script type="application/ld+json">
     {
@@ -33,6 +36,11 @@
                     <span>LITONG</span>
                 </a>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -45,7 +53,7 @@
                 </ul>
             </nav>
             <div class="header-contact">
-                <a href="../contact/" class="btn">Get a Quote</a>
+                <a href="../contact/" class="btn btn-primary">Get a Quote</a>
             </div>
         </div>
     </header>
@@ -64,41 +72,161 @@
             </div>
         </section>
 
-        <section class="article-page">
+        <section class="support-detail-page">
             <div class="container">
-                <div class="article-content">
-                    <p class="article-meta">Published on November 15, 2025 by <a href="#">Emily White, FAE</a></p>
+                <div class="support-content">
+                    <div class="article-meta" style="margin-bottom: var(--space-6); color: var(--gray-500); font-size: var(--text-sm);">
+                        Published on November 15, 2025 by <a href="../contact/" style="color: var(--primary-500);">Emily White, FAE</a>
+                    </div>
                     
-                    <p>MEMS sensors are powerful but sensitive devices. Proper integration is essential to get accurate and repeatable measurements. This guide covers some of the most common pitfalls to avoid.</p>
+                    <p style="font-size: var(--text-lg); color: var(--gray-600); margin-bottom: var(--space-8);">MEMS sensors are powerful but sensitive devices. Proper integration is essential to get accurate and repeatable measurements. This guide covers some of the most common pitfalls to avoid.</p>
 
                     <h2>1. Mechanical Stress on the PCB</h2>
                     <p>MEMS sensors are sensitive to physical stress. Bending or twisting the PCB can introduce an offset in the sensor's readings.</p>
-                    <ul>
-                        <li><strong>Placement:</strong> Place sensors away from high-stress areas, like corners or near large, heavy components. Avoid placing them near mounting holes.</li>
-                        <li><strong>PCB Thickness:</strong> A thicker PCB can help minimize board flex.</li>
-                    </ul>
+                    
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <h4>Optimal Placement</h4>
+                            <p>Place sensors away from high-stress areas, like corners or near large, heavy components. Avoid placing them near mounting holes.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>PCB Thickness</h4>
+                            <p>A thicker PCB (1.6mm or more) can help minimize board flex and reduce mechanical stress on the sensor.</p>
+                        </div>
+                    </div>
 
                     <h2>2. Vibration and Noise</h2>
                     <p>External vibrations can corrupt the output of accelerometers and gyroscopes. While some vibrations are what you want to measure, unwanted environmental vibration is noise.</p>
-                     <ul>
+                    
+                    <ul class="check-list">
                         <li><strong>Filtering:</strong> Use digital low-pass filters to remove high-frequency vibration noise that is outside your band of interest.</li>
                         <li><strong>Mounting:</strong> In some cases, mechanical damping materials can be used to isolate the sensor from the vibration source.</li>
+                        <li><strong>Sensor Fusion:</strong> Combine accelerometer and gyroscope data using sensor fusion algorithms to improve accuracy.</li>
                     </ul>
 
                     <h2>3. Temperature Effects</h2>
                     <p>All MEMS sensors have some sensitivity to temperature. This can cause the offset and sensitivity to drift. Silan's sensors are factory-calibrated to minimize these effects, but for high-precision applications, you may need to perform your own temperature compensation in software.</p>
 
-                </div>
-                <div class="article-sidebar">
-                    <div class="author-bio">
-                        <h3>About the Author</h3>
-                        <p><strong>Emily White</strong> is a Field Application Engineer at LITONG with a focus on sensor technology and IoT applications.</p>
+                    <table class="parameter-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Typical Effect</th>
+                                <th>Mitigation Strategy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Zero-g Offset Drift</td>
+                                <td>±0.5 mg/°C</td>
+                                <td>Temperature calibration at system level</td>
+                            </tr>
+                            <tr>
+                                <td>Sensitivity Drift</td>
+                                <td>±0.01%/°C</td>
+                                <td>Multi-point temperature calibration</td>
+                            </tr>
+                            <tr>
+                                <td>Noise Density</td>
+                                <td>Temperature dependent</td>
+                                <td>Increase averaging at extreme temps</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>4. Power Supply Considerations</h2>
+                    <p>Clean power is essential for accurate sensor readings. MEMS sensors are sensitive to power supply noise and voltage fluctuations.</p>
+
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <h4>Decoupling Capacitors</h4>
+                            <p>Place 100nF ceramic capacitors close to the sensor's power pins. Consider adding a 10uF capacitor for low-frequency noise.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Power Supply Routing</h4>
+                            <p>Keep power traces away from high-frequency signals. Use ground planes to minimize noise coupling.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Voltage Regulation</h4>
+                            <p>Use a dedicated LDO for the sensor if your system has noisy switching regulators.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Power Sequencing</h4>
+                            <p>Follow the datasheet recommendations for power-up and power-down sequences.</p>
+                        </div>
                     </div>
-                    <div class="related-articles">
-                        <h3>Related Articles</h3>
+
+                    <h2>5. Communication Interface</h2>
+                    <p>Most MEMS sensors use I2C or SPI for communication. Proper interface design ensures reliable data transfer.</p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Interface</th>
+                                <th>Speed</th>
+                                <th>Pin Count</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>I2C</td>
+                                <td>Up to 3.4 MHz</td>
+                                <td>2 (SDA, SCL)</td>
+                                <td>Simple wiring, multiple sensors</td>
+                            </tr>
+                            <tr>
+                                <td>SPI</td>
+                                <td>Up to 10 MHz+</td>
+                                <td>4 (MOSI, MISO, SCK, CS)</td>
+                                <td>High-speed data, low latency</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>6. Integration Checklist</h2>
+                    <ol class="step-list">
+                        <li>
+                            <strong>Mechanical Design</strong>
+                            <span>Position sensor away from stress points and vibration sources.</span>
+                        </li>
+                        <li>
+                            <strong>Power Supply Design</strong>
+                            <span>Implement proper decoupling and consider dedicated regulation.</span>
+                        </li>
+                        <li>
+                            <strong>PCB Layout</strong>
+                            <span>Follow grounding best practices and keep traces short.</span>
+                        </li>
+                        <li>
+                            <strong>Software Filtering</strong>
+                            <span>Implement appropriate digital filters for your application.</span>
+                        </li>
+                        <li>
+                            <strong>Calibration</strong>
+                            <span>Perform offset and sensitivity calibration if required.</span>
+                        </li>
+                        <li>
+                            <strong>Temperature Compensation</strong>
+                            <span>Implement temperature compensation for high-precision applications.</span>
+                        </li>
+                    </ol>
+
+                </div>
+                <div class="support-sidebar">
+                    <div class="support-nav-box">
+                        <h3>Related Guides</h3>
                         <ul>
-                            <li><a href="mcu-selection-guide.html">How to Choose the Right Silan MCU</a></li>
+                            <li><a href="mcu-selection-guide.html">MCU Selection Guide</a></li>
+                            <li><a href="ipm-design-guide.html">IPM Design & Application Guide</a></li>
+                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET Selection</a></li>
+                            <li><a href="driver-design-guide.html">Gate Driver Design Guide</a></li>
                         </ul>
+                    </div>
+                    <div class="support-cta-box">
+                        <h3>Need Help?</h3>
+                        <p>Our FAE team can assist with your MEMS sensor integration.</p>
+                        <a href="../contact/" class="btn">Contact Support</a>
                     </div>
                 </div>
             </div>
@@ -121,14 +249,27 @@
                         <li><a href="../about/">About Us</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="mcu-selection-guide.html">MCU Guide</a></li>
+                        <li><a href="ipm-design-guide.html">IPM Design</a></li>
+                        <li><a href="power-device-selection-guide.html">Power Device Guide</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
                     <p>Email: sales@silan-distributor.com</p>
-                    <p>Phone: +1-234-567-8900</p>
+                    <p>Phone: +86-755-XXXX-XXXX</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>

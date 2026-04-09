@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPM Design Guide | Silan Distributor</title>
     <meta name="description" content="Best practices for designing with Silan Intelligent Power Modules (IPMs), including layout, thermal management, and protection.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <script type="application/ld+json">
     {
@@ -33,6 +36,11 @@
                     <span>LITONG</span>
                 </a>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -45,7 +53,7 @@
                 </ul>
             </nav>
             <div class="header-contact">
-                <a href="../contact/" class="btn">Get a Quote</a>
+                <a href="../contact/" class="btn btn-primary">Get a Quote</a>
             </div>
         </div>
     </header>
@@ -64,44 +72,115 @@
             </div>
         </section>
 
-        <section class="article-page">
+        <section class="support-detail-page">
             <div class="container">
-                <div class="article-content">
-                    <p class="article-meta">Published on November 20, 2025 by <a href="#">Jane Smith, FAE</a></p>
+                <div class="support-content">
+                    <div class="article-meta" style="margin-bottom: var(--space-6); color: var(--gray-500); font-size: var(--text-sm);">
+                        Published on November 20, 2025 by <a href="../contact/" style="color: var(--primary-500);">Jane Smith, FAE</a>
+                    </div>
                     
-                    <p>Silan's Intelligent Power Modules (IPMs) simplify power stage design, but proper implementation is key to achieving maximum performance and reliability. This guide covers the essential aspects of designing with IPMs.</p>
+                    <p style="font-size: var(--text-lg); color: var(--gray-600); margin-bottom: var(--space-8);">Silan's Intelligent Power Modules (IPMs) simplify power stage design, but proper implementation is key to achieving maximum performance and reliability. This guide covers the essential aspects of designing with IPMs.</p>
 
                     <h2>1. PCB Layout Considerations</h2>
-                    <p>Good PCB layout is crucial for minimizing noise and parasitic inductance.</p>
-                    <ul>
+                    <p>Good PCB layout is crucial for minimizing noise and parasitic inductance. Follow these guidelines for optimal performance:</p>
+                    
+                    <ul class="check-list">
                         <li><strong>Decoupling Capacitors:</strong> Place high-frequency ceramic capacitors as close as possible to the IPM's power and ground pins.</li>
                         <li><strong>Gate Drive Traces:</strong> Keep the traces between the MCU and the IPM's control inputs short and wide.</li>
                         <li><strong>Power Traces:</strong> Use wide, heavy copper traces for the high-current paths to minimize voltage drop and heat generation.</li>
                     </ul>
 
                     <h2>2. Thermal Management</h2>
-                    <p>Properly managing heat is the most important factor in ensuring IPM reliability. The IPM must be mounted to a heatsink capable of dissipating the heat generated during operation. Use a high-quality thermal interface material (TIM) and ensure proper mounting pressure.</p>
+                    <p>Properly managing heat is the most important factor in ensuring IPM reliability. The IPM must be mounted to a heatsink capable of dissipating the heat generated during operation.</p>
+
+                    <table class="parameter-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Recommendation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Thermal Interface Material</td>
+                                <td>Use high-quality TIM with thermal conductivity >3 W/mK</td>
+                            </tr>
+                            <tr>
+                                <td>Mounting Pressure</td>
+                                <td>Follow datasheet specifications (typically 0.5-2.0 N/mm)</td>
+                            </tr>
+                            <tr>
+                                <td>Heatsink Size</td>
+                                <td>Calculate based on maximum power dissipation and ambient temperature</td>
+                            </tr>
+                            <tr>
+                                <td>Airflow</td>
+                                <td>Ensure adequate natural or forced convection cooling</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <h2>3. Understanding Protection Features</h2>
                     <p>IPMs integrate various protection features. It's important to understand how they work:</p>
-                    <ul>
-                        <li><strong>Under-Voltage Lockout (UVLO):</strong> Prevents the IPM from operating with insufficient gate voltage, which could cause damage.</li>
-                        <li><strong>Short-Circuit Protection (SCP):</strong> Detects excessive current and safely shuts down the IPM.</li>
-                        <li><strong>Over-Temperature Protection (OTP):</strong> An internal sensor shuts the IPM down if it exceeds a safe operating temperature.</li>
-                    </ul>
+                    
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <h4>Under-Voltage Lockout (UVLO)</h4>
+                            <p>Prevents the IPM from operating with insufficient gate voltage, which could cause damage to the internal IGBTs.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Short-Circuit Protection (SCP)</h4>
+                            <p>Detects excessive current and safely shuts down the IPM within microseconds to prevent catastrophic failure.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Over-Temperature Protection (OTP)</h4>
+                            <p>An internal sensor shuts the IPM down if it exceeds a safe operating temperature threshold.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Fault Output</h4>
+                            <p>Provides a signal to the MCU when a fault condition occurs, allowing for proper system response.</p>
+                        </div>
+                    </div>
+
+                    <h2>4. Design Checklist</h2>
+                    <ol class="step-list">
+                        <li>
+                            <strong>Power Supply Design</strong>
+                            <span>Ensure stable 15V supply for gate drive with adequate decoupling capacitors.</span>
+                        </li>
+                        <li>
+                            <strong>Control Signal Routing</strong>
+                            <span>Keep PWM signals away from high-current paths to prevent noise coupling.</span>
+                        </li>
+                        <li>
+                            <strong>Thermal Design</strong>
+                            <span>Calculate thermal requirements and select appropriate heatsink and TIM.</span>
+                        </li>
+                        <li>
+                            <strong>Protection Configuration</strong>
+                            <span>Configure external protection circuits (current sensing, temperature monitoring).</span>
+                        </li>
+                        <li>
+                            <strong>Testing Protocol</strong>
+                            <span>Develop comprehensive test plan including overload and fault condition testing.</span>
+                        </li>
+                    </ol>
 
                 </div>
-                <div class="article-sidebar">
-                    <div class="author-bio">
-                        <h3>About the Author</h3>
-                        <p><strong>Jane Smith</strong> is a Field Application Engineer at LITONG, specializing in power electronics and motor control applications.</p>
-                    </div>
-                    <div class="related-articles">
-                        <h3>Related Articles</h3>
+                <div class="support-sidebar">
+                    <div class="support-nav-box">
+                        <h3>Related Guides</h3>
                         <ul>
-                            <li><a href="mcu-selection-guide.html">How to Choose the Right Silan MCU</a></li>
-                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET: A Practical Selection Guide</a></li>
+                            <li><a href="mcu-selection-guide.html">MCU Selection Guide</a></li>
+                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET Selection</a></li>
+                            <li><a href="driver-design-guide.html">Gate Driver Design Guide</a></li>
+                            <li><a href="mems-integration-guide.html">MEMS Integration Guide</a></li>
                         </ul>
+                    </div>
+                    <div class="support-cta-box">
+                        <h3>Need Help?</h3>
+                        <p>Our FAE team can assist with your IPM design and implementation.</p>
+                        <a href="../contact/" class="btn">Contact Support</a>
                     </div>
                 </div>
             </div>
@@ -124,14 +203,27 @@
                         <li><a href="../about/">About Us</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="mcu-selection-guide.html">MCU Guide</a></li>
+                        <li><a href="ipm-design-guide.html">IPM Design</a></li>
+                        <li><a href="power-device-selection-guide.html">Power Device Guide</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
                     <p>Email: sales@silan-distributor.com</p>
-                    <p>Phone: +1-234-567-8900</p>
+                    <p>Phone: +86-755-XXXX-XXXX</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>

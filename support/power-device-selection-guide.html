@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IGBT vs. MOSFET Guide | Silan Distributor</title>
     <meta name="description" content="A practical guide to choosing between IGBTs and MOSFETs for your power switching application, with examples using Silan products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <script type="application/ld+json">
     {
@@ -33,6 +36,11 @@
                     <span>LITONG</span>
                 </a>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -45,7 +53,7 @@
                 </ul>
             </nav>
             <div class="header-contact">
-                <a href="../contact/" class="btn">Get a Quote</a>
+                <a href="../contact/" class="btn btn-primary">Get a Quote</a>
             </div>
         </div>
     </header>
@@ -64,18 +72,58 @@
             </div>
         </section>
 
-        <section class="article-page">
+        <section class="support-detail-page">
             <div class="container">
-                <div class="article-content">
-                    <p class="article-meta">Published on November 18, 2025 by <a href="#">John Doe, FAE</a></p>
+                <div class="support-content">
+                    <div class="article-meta" style="margin-bottom: var(--space-6); color: var(--gray-500); font-size: var(--text-sm);">
+                        Published on November 18, 2025 by <a href="../contact/" style="color: var(--primary-500);">John Doe, FAE</a>
+                    </div>
                     
-                    <p>IGBTs and MOSFETs are the two most common power switches, but they have different characteristics. Choosing the right one is key to an efficient and reliable design.</p>
+                    <p style="font-size: var(--text-lg); color: var(--gray-600); margin-bottom: var(--space-8);">IGBTs and MOSFETs are the two most common power switches, but they have different characteristics. Choosing the right one is key to an efficient and reliable design.</p>
 
                     <h2>1. Operating Principle</h2>
                     <p>A MOSFET is a voltage-controlled device that behaves like a resistor when on. An IGBT combines the simple gate drive of a MOSFET with the high-current and low-saturation-voltage capability of a bipolar transistor.</p>
                     
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <h4>MOSFET</h4>
+                            <p>Voltage-controlled device with resistive conduction characteristics. Best for high-frequency and low-voltage applications.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>IGBT</h4>
+                            <p>Combines MOSFET gate drive with bipolar conduction. Ideal for high-voltage, high-current applications.</p>
+                        </div>
+                    </div>
+                    
                     <h2>2. Switching Speed</h2>
                     <p><strong>MOSFETs are the clear winners here.</strong> They can switch at frequencies of several hundred kHz, or even into the MHz range. IGBTs are generally limited to frequencies below 100 kHz due to their "tail current" during turn-off.</p>
+
+                    <table class="parameter-table">
+                        <thead>
+                            <tr>
+                                <th>Device</th>
+                                <th>Typical Switching Frequency</th>
+                                <th>Best Applications</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Low-Voltage MOSFET</td>
+                                <td>100 kHz - 1 MHz+</td>
+                                <td>DC-DC converters, SMPS</td>
+                            </tr>
+                            <tr>
+                                <td>High-Voltage MOSFET</td>
+                                <td>50 - 200 kHz</td>
+                                <td>LED drivers, adapters</td>
+                            </tr>
+                            <tr>
+                                <td>IGBT</td>
+                                <td>1 - 50 kHz</td>
+                                <td>Motor drives, inverters</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <h2>3. Voltage and Current Ratings</h2>
                     <p><strong>IGBTs typically handle higher voltages and currents.</strong> While high-voltage MOSFETs exist, IGBTs are generally more cost-effective for applications above 600V and tens of amps.</p>
@@ -83,24 +131,110 @@
                     <h2>4. Conduction Loss</h2>
                     <p>At low currents, MOSFETs have lower conduction losses due to their resistive nature (Rds(on)). At high currents, the fixed saturation voltage (Vce(sat)) of an IGBT results in lower conduction losses.</p>
 
-                    <h2>Conclusion: Which to Choose?</h2>
-                    <ul>
-                        <li><strong>Use a MOSFET for:</strong> High-frequency applications (like switching power supplies) and low-voltage applications (below 200V).</li>
-                        <li><strong>Use an IGBT for:</strong> High-power, high-voltage, lower-frequency applications (like motor drives and solar inverters).</li>
-                    </ul>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Characteristic</th>
+                                <th>MOSFET</th>
+                                <th>IGBT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gate Drive</td>
+                                <td>Simple voltage drive</td>
+                                <td>Simple voltage drive</td>
+                            </tr>
+                            <tr>
+                                <td>Conduction Loss (Low Current)</td>
+                                <td>Lower (I x Rds(on))</td>
+                                <td>Higher</td>
+                            </tr>
+                            <tr>
+                                <td>Conduction Loss (High Current)</td>
+                                <td>Higher</td>
+                                <td>Lower (I x Vce(sat))</td>
+                            </tr>
+                            <tr>
+                                <td>Switching Speed</td>
+                                <td>Very Fast</td>
+                                <td>Moderate</td>
+                            </tr>
+                            <tr>
+                                <td>Voltage Rating</td>
+                                <td>Up to ~900V</td>
+                                <td>600V - 6500V+</td>
+                            </tr>
+                            <tr>
+                                <td>Cost (High Voltage)</td>
+                                <td>Higher</td>
+                                <td>Lower</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>5. Conclusion: Which to Choose?</h2>
+                    
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <h4>Use a MOSFET for:</h4>
+                            <ul style="margin: 0; padding-left: var(--space-5);">
+                                <li>High-frequency applications (SMPS, DC-DC)</li>
+                                <li>Low-voltage applications (below 200V)</li>
+                                <li>Applications requiring fast switching</li>
+                                <li>Low to medium current applications</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Use an IGBT for:</h4>
+                            <ul style="margin: 0; padding-left: var(--space-5);">
+                                <li>High-power applications (motor drives)</li>
+                                <li>High-voltage applications (above 600V)</li>
+                                <li>Lower-frequency switching (below 50kHz)</li>
+                                <li>High-current applications (>10A)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>6. Selection Decision Tree</h2>
+                    <ol class="step-list">
+                        <li>
+                            <strong>Determine Voltage Requirement</strong>
+                            <span>If >600V, strongly consider IGBT. If <200V, MOSFET is usually better.</span>
+                        </li>
+                        <li>
+                            <strong>Evaluate Switching Frequency</strong>
+                            <span>If >100kHz required, MOSFET is typically the only option.</span>
+                        </li>
+                        <li>
+                            <strong>Calculate Current Requirements</strong>
+                            <span>For high current (>20A) at high voltage, IGBT usually wins on conduction losses.</span>
+                        </li>
+                        <li>
+                            <strong>Consider Cost Constraints</strong>
+                            <span>At high voltages, IGBTs are generally more cost-effective.</span>
+                        </li>
+                        <li>
+                            <strong>Evaluate Thermal Requirements</strong>
+                            <span>Compare total losses (conduction + switching) for your specific operating conditions.</span>
+                        </li>
+                    </ol>
 
                 </div>
-                <div class="article-sidebar">
-                    <div class="author-bio">
-                        <h3>About the Author</h3>
-                        <p><strong>John Doe</strong> is a Senior Field Application Engineer at LITONG with over 10 years of experience in embedded systems design and MCU applications.</p>
-                    </div>
-                    <div class="related-articles">
-                        <h3>Related Articles</h3>
+                <div class="support-sidebar">
+                    <div class="support-nav-box">
+                        <h3>Related Guides</h3>
                         <ul>
-                            <li><a href="mcu-selection-guide.html">How to Choose the Right Silan MCU</a></li>
+                            <li><a href="mcu-selection-guide.html">MCU Selection Guide</a></li>
                             <li><a href="ipm-design-guide.html">IPM Design & Application Guide</a></li>
+                            <li><a href="driver-design-guide.html">Gate Driver Design Guide</a></li>
+                            <li><a href="mems-integration-guide.html">MEMS Integration Guide</a></li>
                         </ul>
+                    </div>
+                    <div class="support-cta-box">
+                        <h3>Need Help?</h3>
+                        <p>Our FAE team can help you select the right power device for your application.</p>
+                        <a href="../contact/" class="btn">Contact Support</a>
                     </div>
                 </div>
             </div>
@@ -123,14 +257,27 @@
                         <li><a href="../about/">About Us</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="mcu-selection-guide.html">MCU Guide</a></li>
+                        <li><a href="ipm-design-guide.html">IPM Design</a></li>
+                        <li><a href="power-device-selection-guide.html">Power Device Guide</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
                     <p>Email: sales@silan-distributor.com</p>
-                    <p>Phone: +1-234-567-8900</p>
+                    <p>Phone: +86-755-XXXX-XXXX</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>

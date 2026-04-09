@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gate Driver Design Guide | Silan Distributor</title>
     <meta name="description" content="A technical guide to designing robust and efficient gate driver circuits for high-speed switching of MOSFETs and IGBTs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <script type="application/ld+json">
     {
@@ -33,6 +36,11 @@
                     <span>LITONG</span>
                 </a>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -45,7 +53,7 @@
                 </ul>
             </nav>
             <div class="header-contact">
-                <a href="../contact/" class="btn">Get a Quote</a>
+                <a href="../contact/" class="btn btn-primary">Get a Quote</a>
             </div>
         </div>
     </header>
@@ -64,16 +72,19 @@
             </div>
         </section>
 
-        <section class="article-page">
+        <section class="support-detail-page">
             <div class="container">
-                <div class="article-content">
-                    <p class="article-meta">Published on November 12, 2025 by <a href="#">Jane Smith, FAE</a></p>
+                <div class="support-content">
+                    <div class="article-meta" style="margin-bottom: var(--space-6); color: var(--gray-500); font-size: var(--text-sm);">
+                        Published on November 12, 2025 by <a href="../contact/" style="color: var(--primary-500);">Jane Smith, FAE</a>
+                    </div>
                     
-                    <p>A well-designed gate driver circuit is essential for achieving fast, efficient, and reliable switching of power MOSFETs and IGBTs. This guide covers key principles for optimizing your gate drive design.</p>
+                    <p style="font-size: var(--text-lg); color: var(--gray-600); margin-bottom: var(--space-8);">A well-designed gate driver circuit is essential for achieving fast, efficient, and reliable switching of power MOSFETs and IGBTs. This guide covers key principles for optimizing your gate drive design.</p>
 
                     <h2>1. Minimizing Gate Loop Inductance</h2>
                     <p>The most critical aspect of gate driver layout is minimizing the inductance of the loop formed by the driver output, the transistor gate, and the return path. High inductance in this loop will cause ringing and voltage overshoots.</p>
-                    <ul>
+                    
+                    <ul class="check-list">
                         <li>Keep the driver IC as close as possible to the power transistor.</li>
                         <li>Use wide, parallel traces for the drive and return paths to maximize mutual inductance and reduce total loop inductance.</li>
                         <li>Place a low-ESR ceramic capacitor right at the VCC pin of the driver IC.</li>
@@ -81,23 +92,104 @@
 
                     <h2>2. Selecting the Gate Resistor</h2>
                     <p>The gate resistor controls the turn-on and turn-off speed of the transistor. A smaller resistor allows for faster switching, but increases the risk of ringing. A larger resistor provides damping but increases switching losses.</p>
+
+                    <table class="parameter-table">
+                        <thead>
+                            <tr>
+                                <th>Gate Resistor</th>
+                                <th>Turn-on Time</th>
+                                <th>Switching Loss</th>
+                                <th>EMI/Ringing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Low (1-5 Ohm)</td>
+                                <td>Fast</td>
+                                <td>Low</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Medium (10-22 Ohm)</td>
+                                <td>Moderate</td>
+                                <td>Medium</td>
+                                <td>Moderate</td>
+                            </tr>
+                            <tr>
+                                <td>High (33-100 Ohm)</td>
+                                <td>Slow</td>
+                                <td>High</td>
+                                <td>Low</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <p>Often, separate resistors are used for turn-on (Rg(on)) and turn-off (Rg(off)). A smaller Rg(off) allows for a rapid turn-off, which is critical for preventing shoot-through in half-bridge configurations.</p>
 
                     <h2>3. The Miller Plateau</h2>
                     <p>During the switching transition, the gate-to-drain capacitance (the "Miller" capacitance) must be charged or discharged. This causes a plateau in the gate voltage waveform. The gate driver must be able to source or sink enough current to get through this plateau region quickly to minimize switching losses.</p>
 
-                </div>
-                <div class="article-sidebar">
-                    <div class="author-bio">
-                        <h3>About the Author</h3>
-                        <p><strong>Jane Smith</strong> is a Field Application Engineer at LITONG, specializing in power electronics and motor control applications.</p>
+                    <h2>4. Bootstrap Circuit Design</h2>
+                    <p>For high-side gate drivers, a bootstrap circuit is commonly used to provide the floating supply voltage. Proper bootstrap capacitor sizing is critical:</p>
+
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <h4>Bootstrap Capacitor</h4>
+                            <p>Size the capacitor to provide sufficient charge for the high-side gate drive, typically 10-100x the gate charge of the MOSFET.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Bootstrap Diode</h4>
+                            <p>Use a fast-recovery diode with low reverse leakage current and adequate voltage rating.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Refresh Time</h4>
+                            <p>Ensure the low-side switch conducts long enough to recharge the bootstrap capacitor each PWM cycle.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>UVLO Protection</h4>
+                            <p>Monitor the bootstrap voltage to prevent operation with insufficient gate drive voltage.</p>
+                        </div>
                     </div>
-                    <div class="related-articles">
-                        <h3>Related Articles</h3>
+
+                    <h2>5. Design Checklist</h2>
+                    <ol class="step-list">
+                        <li>
+                            <strong>Calculate Peak Gate Current</strong>
+                            <span>Determine the required peak current based on gate charge and desired switching time.</span>
+                        </li>
+                        <li>
+                            <strong>Select Gate Resistor</strong>
+                            <span>Choose Rg value to balance switching speed and EMI/ringing requirements.</span>
+                        </li>
+                        <li>
+                            <strong>Optimize PCB Layout</strong>
+                            <span>Minimize gate loop inductance and keep high-current paths away from sensitive signals.</span>
+                        </li>
+                        <li>
+                            <strong>Design Bootstrap Circuit</strong>
+                            <span>Size bootstrap capacitor and select appropriate diode for high-side drive.</span>
+                        </li>
+                        <li>
+                            <strong>Add Protection</strong>
+                            <span>Implement under-voltage lockout and over-current protection as needed.</span>
+                        </li>
+                    </ol>
+
+                </div>
+                <div class="support-sidebar">
+                    <div class="support-nav-box">
+                        <h3>Related Guides</h3>
                         <ul>
+                            <li><a href="mcu-selection-guide.html">MCU Selection Guide</a></li>
                             <li><a href="ipm-design-guide.html">IPM Design & Application Guide</a></li>
-                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET: A Practical Selection Guide</a></li>
+                            <li><a href="power-device-selection-guide.html">IGBT vs. MOSFET Selection</a></li>
+                            <li><a href="mems-integration-guide.html">MEMS Integration Guide</a></li>
                         </ul>
+                    </div>
+                    <div class="support-cta-box">
+                        <h3>Need Help?</h3>
+                        <p>Our FAE team can assist with your gate driver design.</p>
+                        <a href="../contact/" class="btn">Contact Support</a>
                     </div>
                 </div>
             </div>
@@ -120,14 +212,27 @@
                         <li><a href="../about/">About Us</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="mcu-selection-guide.html">MCU Guide</a></li>
+                        <li><a href="ipm-design-guide.html">IPM Design</a></li>
+                        <li><a href="power-device-selection-guide.html">Power Device Guide</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
                     <p>Email: sales@silan-distributor.com</p>
-                    <p>Phone: +1-234-567-8900</p>
+                    <p>Phone: +86-755-XXXX-XXXX</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
