@@ -1269,6 +1269,20 @@ header nav ul li a.active::after {
     flex-grow: 1;
 }
 
+.product-categories .product-card .btn {
+    margin-top: auto;
+    align-self: center;
+    width: 100%;
+    max-width: 200px;
+    color: var(--white-color);
+    display: inline-flex;
+    justify-content: center;
+}
+
+.product-categories .product-card .btn::after {
+    content: none;
+}
+
 .product-features li {
     padding: var(--space-2) 0 var(--space-2) var(--space-6);
     font-size: var(--text-sm);
@@ -1305,6 +1319,13 @@ header nav ul li a.active::after {
     background-color: var(--gray-50);
 }
 
+.solutions-listing .solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    align-items: stretch;
+}
+
 .solution-card {
     background: var(--white-color);
     border: 1px solid var(--gray-200);
@@ -1314,6 +1335,9 @@ header nav ul li a.active::after {
     transition: all var(--transition-slow);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .solution-card::before {
@@ -1348,12 +1372,14 @@ header nav ul li a.active::after {
     background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
     border-radius: var(--radius-xl);
     color: var(--white-color);
+    flex-shrink: 0;
 }
 
 .solution-card h3 {
     font-size: var(--text-xl);
     margin-bottom: var(--space-3);
     color: var(--gray-900);
+    flex-shrink: 0;
 }
 
 .solution-card p {
@@ -1361,6 +1387,7 @@ header nav ul li a.active::after {
     color: var(--gray-600);
     margin-bottom: var(--space-5);
     line-height: var(--leading-relaxed);
+    flex-shrink: 0;
 }
 
 .solution-features {
@@ -1368,6 +1395,17 @@ header nav ul li a.active::after {
     padding: 0;
     margin: 0 0 var(--space-6);
     text-align: left;
+    flex-grow: 1;
+}
+
+.solution-card .btn {
+    margin-top: auto;
+    align-self: center;
+    width: 100%;
+    max-width: 200px;
+    color: var(--white-color);
+    display: inline-flex;
+    justify-content: center;
 }
 
 .solution-features li {
@@ -1410,6 +1448,7 @@ header nav ul li a.active::after {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
+    align-items: stretch;
 }
 
 .support-card {
@@ -1420,6 +1459,9 @@ header nav ul li a.active::after {
     transition: all var(--transition-slow);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .support-card::before {
@@ -1454,12 +1496,14 @@ header nav ul li a.active::after {
     background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
     border-radius: var(--radius-xl);
     color: var(--white-color);
+    flex-shrink: 0;
 }
 
 .support-card h3 {
     font-size: var(--text-xl);
     margin-bottom: var(--space-3);
     color: var(--gray-900);
+    flex-shrink: 0;
 }
 
 .support-card p {
@@ -1467,12 +1511,19 @@ header nav ul li a.active::after {
     color: var(--gray-600);
     margin-bottom: var(--space-5);
     line-height: var(--leading-relaxed);
+    flex-shrink: 0;
 }
 
 .support-features {
     list-style: none;
     padding: 0;
     margin: 0 0 var(--space-6);
+    flex-grow: 1;
+}
+
+.support-card .btn {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .support-features li {
