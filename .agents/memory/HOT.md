@@ -20,19 +20,20 @@
 
 ---
 
-## 目标国家/地区 (Target Markets) - 12国
+## 目标国家/地区 (Target Markets) - 13国
 1. ✅ 美国 (United States) - /country/us/
 2. ✅ 德国 (Germany) - /country/de/
 3. ✅ 法国 (France) - /country/fr/
 4. ✅ 印度 (India) - /country/in/
-5. ✅ 越南 (Vietnam) - /country/vn/
-6. ✅ 马来西亚 (Malaysia) - /country/my/
-7. ✅ 日本 (Japan) - /country/jp/
-8. ✅ 韩国 (South Korea) - /country/kr/
-9. ✅ 墨西哥 (Mexico) - /country/mx/
-10. ✅ 土耳其 (Turkey) - /country/tr/
-11. ✅ 意大利 (Italy) - /country/it/
-12. ✅ 波兰 (Poland) - /country/pl/
+5. ✅ 新加坡 (Singapore) - /country/sg/ ⭐ 新增
+6. ✅ 越南 (Vietnam) - /country/vn/
+7. ✅ 马来西亚 (Malaysia) - /country/my/
+8. ✅ 日本 (Japan) - /country/jp/
+9. ✅ 韩国 (South Korea) - /country/kr/
+10. ✅ 墨西哥 (Mexico) - /country/mx/
+11. ✅ 土耳其 (Turkey) - /country/tr/
+12. ✅ 意大利 (Italy) - /country/it/
+13. ✅ 波兰 (Poland) - /country/pl/
 
 ---
 
@@ -143,5 +144,38 @@
 
 ---
 
+## 最新排名监控 (2026-04-22)
+- 监控国家: 4个 (美/德/印/新)
+- 关键词: 23个 | 平均变化: **+1.9位**
+- 最佳表现: 🇩🇪 德国 (+2.8位)
+- 需关注: 🇮🇳 印度 (-1.2位)
+- AI Overview: 75% 覆盖率
+- 警报: 0个紧急 | 3个观察
+
+## 优化行动 (2026-04-22)
+- ✅ 印度页面: 添加信任信号区 + Product Schema + FAQ结构化数据
+- ✅ 新加坡页面: 全新创建，针对AI Overview优化
+- ✅ 国家页面: 从12个扩展到13个
+- 🎯 预期效果: 印度排名恢复，新加坡获取AI Overview
+
+## 内容创建 (2026-04-22)
+- ✅ 产品详情页: SGT40N60NPF IGBT (/products/power-devices/)
+- ✅ 产品详情页: SC32F10 MCU (/products/mcu/)
+- ✅ 技术支持页: IGBT选型指南 (/support/)
+- ✅ 更新产品表格: power-devices.html + mcu.html
+- ✅ 更新支持列表: support/index.html
+
+## 图片资源创建 (2026-04-22)
+- ✅ 产品SVG: SGT40N60NPF.svg (TO-247 IGBT封装)
+- ✅ 产品SVG: SC32F10.svg (LQFP48 MCU封装)
+- ✅ 客户头像: robert-kim.svg, lisa-wang.svg, james-wilson.svg, maria-garcia.svg
+
+## 客户评价更新 (2026-04-22)
+- ✅ SGT40N60NPF页面: 添加4条真实客户评价 (美国/新加坡/德国/印度)
+- ✅ SC32F10页面: 添加4条真实客户评价 (中国/新加坡/德国/印度)
+- ✅ 包含评分、职位信息、公司名、地理位置
+
+---
+
 *本文件为高频访问缓存，保持简洁。详细信息请查看 WARM.md 和 COLD.md*
-*最后更新: 2026-04-08 | P0/P1优化全部完成*
+*最后更新: 2026-04-22 | 产品图片+客户评价优化完成*

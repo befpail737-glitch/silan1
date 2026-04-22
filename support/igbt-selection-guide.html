@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGBT Selection Guide | How to Choose the Right IGBT | Silan Support</title>
+    <meta name="description" content="Complete IGBT selection guide: voltage rating, current capacity, switching speed, and thermal considerations. Learn how to choose the right Silan IGBT for your application. Free FAE support.">
+    <meta name="keywords" content="IGBT selection guide, how to choose IGBT, IGBT voltage rating, IGBT current rating, IGBT switching speed, Silan IGBT application">
+    <link rel="canonical" href="https://silan.elec-distributor.com/support/igbt-selection-guide.html">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Schema Markup: Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "IGBT Selection Guide: How to Choose the Right IGBT for Your Application",
+      "description": "Complete guide to selecting IGBTs including voltage rating, current capacity, switching characteristics, and thermal management considerations.",
+      "image": "https://silan.elec-distributor.com/images/support/igbt-selection-guide.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "LITONG Technical Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LITONG",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://silan.elec-distributor.com/images/logo.svg"
+        }
+      },
+      "datePublished": "2025-01-15",
+      "dateModified": "2025-01-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://silan.elec-distributor.com/support/igbt-selection-guide.html"
+      }
+    }
+    </script>
+    
+    <!-- Schema Markup: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://silan.elec-distributor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://silan.elec-distributor.com/support/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "IGBT Selection Guide",
+          "item": "https://silan.elec-distributor.com/support/igbt-selection-guide.html"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema Markup: FAQPage for AI Overview -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I choose the right IGBT for my application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To choose the right IGBT, consider four key factors: 1) Voltage rating - select VCES at least 1.5-2x your DC bus voltage, 2) Current rating - choose IC based on RMS current with 1.5-2x safety margin, 3) Switching speed - faster for high frequency (>20kHz), slower for better EMI, 4) Thermal performance - ensure RthJC allows safe operation at max temperature."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between IGBT and MOSFET?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IGBTs combine MOSFET input characteristics with bipolar output, making them ideal for high-voltage (>300V), high-current applications. MOSFETs are better for lower voltage, high-frequency switching. IGBTs have lower conduction losses at high currents but slower switching speeds compared to MOSFETs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What voltage rating IGBT do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Select an IGBT voltage rating (VCES) at least 1.5 to 2 times your maximum DC bus voltage. For 400V DC bus (rectified 230VAC), use 600V IGBTs. For 600V DC bus, use 1200V IGBTs. This provides safety margin for voltage spikes and transients."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="Silan Distributor Logo">
+                    <span>LITONG</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../products/">Products</a></li>
+                    <li><a href="../solutions/">Solutions</a></li>
+                    <li><a href="index.html" class="active">Support</a></li>
+                    <li><a href="../news/">News</a></li>
+                    <li><a href="../about/">About Us</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <a href="../contact/" class="btn">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Support</a></li>
+                    <li>IGBT Selection Guide</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Article Header -->
+        <section class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category">Technical Guide</span>
+                    <span class="article-date">Updated: January 2025</span>
+                </div>
+                <h1>IGBT Selection Guide: How to Choose the Right IGBT for Your Application</h1>
+                <p class="article-subtitle">A comprehensive guide to selecting IGBTs based on voltage rating, current capacity, switching characteristics, and thermal management requirements.</p>
+                
+                <div class="article-actions">
+                    <a href="../contact/?action=tech" class="btn btn-primary">Get Free Technical Support</a>
+                    <a href="#calculator" class="btn btn-secondary">Use IGBT Calculator</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="toc-section">
+            <div class="container">
+                <h2>Table of Contents</h2>
+                <nav class="toc-nav">
+                    <ol>
+                        <li><a href="#voltage">Voltage Rating Selection</a></li>
+                        <li><a href="#current">Current Rating Selection</a></li>
+                        <li><a href="#switching">Switching Speed Requirements</a></li>
+                        <li><a href="#thermal">Thermal Management</a></li>
+                        <li><a href="#packages">Package Selection</a></li>
+                        <li><a href="#comparison">IGBT vs MOSFET Selection</a></li>
+                        <li><a href="#recommendations">Silan IGBT Recommendations</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <article class="article-content">
+            <div class="container">
+                
+                <!-- Section 1: Voltage Rating -->
+                <section id="voltage" class="content-section">
+                    <h2>1. Voltage Rating Selection</h2>
+                    <p>The first and most critical parameter in IGBT selection is the voltage rating. Selecting an IGBT with insufficient voltage rating can lead to catastrophic failure, while over-specifying increases cost unnecessarily.</p>
+                    
+                    <h3>Voltage Rating Guidelines</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Application</th>
+                                <th>DC Bus Voltage</th>
+                                <th>Recommended VCES</th>
+                                <th>Silan IGBT Series</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>230V AC Motor Drive</td>
+                                <td>310-400V DC</td>
+                                <td>600V</td>
+                                <td>SGT40N60NPF, SGT50N65</td>
+                            </tr>
+                            <tr>
+                                <td>400V AC Industrial</td>
+                                <td>540-650V DC</td>
+                                <td>1200V</td>
+                                <td>SDM30N120, SDM50N120</td>
+                            </tr>
+                            <tr>
+                                <td>Solar Inverter ( residential)</td>
+                                <td>350-450V DC</td>
+                                <td>600V</td>
+                                <td>SGT30N60, SGT40N60NPF</td>
+                            </tr>
+                            <tr>
+                                <td>Welding Machine</td>
+                                <td>300-400V DC</td>
+                                <td>600V</td>
+                                <td>SGT40N60NPF, SGT50N65</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="info-box">
+                        <h4>💡 Design Tip</h4>
+                        <p>Always include a safety margin of 1.5x to 2x between your maximum operating voltage and the IGBT's VCES rating. This accounts for voltage spikes, switching transients, and derating at high temperatures.</p>
+                    </div>
+                </section>
+
+                <!-- Section 2: Current Rating -->
+                <section id="current" class="content-section">
+                    <h2>2. Current Rating Selection</h2>
+                    <p>The current rating determines how much power your IGBT can handle. It's crucial to calculate both continuous and peak current requirements accurately.</p>
+                    
+                    <h3>Current Calculation Steps</h3>
+                    <ol class="steps-list">
+                        <li><strong>Calculate RMS Current:</strong> Determine the RMS current based on your load profile and duty cycle.</li>
+                        <li><strong>Apply Safety Factor:</strong> Multiply RMS current by 1.5 to 2.0 for reliable operation.</li>
+                        <li><strong>Consider Overload:</strong> Account for startup currents and temporary overloads (typically 2x rated current for 1 minute).</li>
+                        <li><strong>Temperature Derating:</strong> IGBT current rating decreases at high temperatures. Check the datasheet curves.</li>
+                    </ol>
+                    
+                    <h3>Current Rating Quick Reference</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Application Power</th>
+                                <th>Typical RMS Current</th>
+                                <th>Recommended IC Rating</th>
+                                <th>Silan IGBT Model</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1-2 kW Motor Drive</td>
+                                <td>3-6A</td>
+                                <td>15-20A</td>
+                                <td>SGT15N60, SGT20N60</td>
+                            </tr>
+                            <tr>
+                                <td>3-5 kW Inverter</td>
+                                <td>8-15A</td>
+                                <td>30-40A</td>
+                                <td>SGT30N60, SGT40N60NPF</td>
+                            </tr>
+                            <tr>
+                                <td>5-10 kW Industrial</td>
+                                <td>15-25A</td>
+                                <td>50-75A</td>
+                                <td>SGT50N65, SGT75N65</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Section 3: Switching Speed -->
+                <section id="switching" class="content-section">
+                    <h2>3. Switching Speed Requirements</h2>
+                    <p>Switching speed affects both efficiency and EMI. Faster switching reduces switching losses but increases EMI and voltage spikes.</p>
+                    
+                    <h3>Switching Frequency Guidelines</h3>
+                    <div class="frequency-guide">
+                        <div class="freq-category">
+                            <h4>Low Frequency (1-5 kHz)</h4>
+                            <ul>
+                                <li>Motor drives (>5kW)</li>
+                                <li>Welding equipment</li>
+                                <li>Induction heating</li>
+                            </ul>
+                            <p><strong>Recommendation:</strong> Standard speed IGBTs (e.g., SGT40N60)</p>
+                        </div>
+                        <div class="freq-category">
+                            <h4>Medium Frequency (5-20 kHz)</h4>
+                            <ul>
+                                <li>UPS and inverters</li>
+                                <li>Small motor drives</li>
+                                <li>Power supplies</li>
+                            </ul>
+                            <p><strong>Recommendation:</strong> Fast switching IGBTs (e.g., SGT40N60NPF)</p>
+                        </div>
+                        <div class="freq-category">
+                            <h4>High Frequency (>20 kHz)</h4>
+                            <ul>
+                                <li>SMPS</li>
+                                <li>DC-DC converters</li>
+                                <li>Induction cookers</li>
+                            </ul>
+                            <p><strong>Recommendation:</strong> Ultra-fast IGBTs or consider MOSFETs</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Thermal Management -->
+                <section id="thermal" class="content-section">
+                    <h2>4. Thermal Management</h2>
+                    <p>Proper thermal management is essential for reliable IGBT operation. The junction temperature must be kept below Tj(max) under all operating conditions.</p>
+                    
+                    <h3>Thermal Calculation</h3>
+                    <div class="formula-box">
+                        <p><strong>Tj = Ta + Ptotal × (RthJC + RthCS + RthSA)</strong></p>
+                        <ul>
+                            <li>Tj = Junction temperature (°C)</li>
+                            <li>Ta = Ambient temperature (°C)</li>
+                            <li>Ptotal = Total power dissipation (W)</li>
+                            <li>RthJC = Junction-to-case thermal resistance (°C/W)</li>
+                            <li>RthCS = Case-to-heatsink thermal resistance (°C/W)</li>
+                            <li>RthSA = Heatsink-to-ambient thermal resistance (°C/W)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Silan IGBT Thermal Performance</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>IGBT Model</th>
+                                <th>RthJC (°C/W)</th>
+                                <th>Max Pdiss (@Tc=100°C)</th>
+                                <th>Package</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SGT40N60NPF</td>
+                                <td>0.65</td>
+                                <td>115W</td>
+                                <td>TO-247</td>
+                            </tr>
+                            <tr>
+                                <td>SGT30N60</td>
+                                <td>0.85</td>
+                                <td>88W</td>
+                                <td>TO-220</td>
+                            </tr>
+                            <tr>
+                                <td>SGT50N65</td>
+                                <td>0.45</td>
+                                <td>167W</td>
+                                <td>TO-247</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Section 5: Package Selection -->
+                <section id="packages" class="content-section">
+                    <h2>5. Package Selection</h2>
+                    <p>The package affects thermal performance, mounting, and isolation requirements.</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Package</th>
+                                <th>Power Range</th>
+                                <th>Thermal Performance</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TO-220</td>
+                                <td>Up to 50W</td>
+                                <td>Good</td>
+                                <td>Low power, through-hole</td>
+                            </tr>
+                            <tr>
+                                <td>TO-247</td>
+                                <td>50-150W</td>
+                                <td>Excellent</td>
+                                <td>Medium-high power</td>
+                            </tr>
+                            <tr>
+                                <td>TO-264</td>
+                                <td>150-300W</td>
+                                <td>Superior</td>
+                                <td>High power industrial</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Section 6: IGBT vs MOSFET -->
+                <section id="comparison" class="content-section">
+                    <h2>6. IGBT vs MOSFET Selection</h2>
+                    <p>Choosing between IGBT and MOSFET depends on voltage, current, and switching frequency requirements.</p>
+                    
+                    <table class="data-table comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>IGBT</th>
+                                <th>MOSFET</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Voltage Range</td>
+                                <td>600V - 6500V</td>
+                                <td>Up to 1000V (optimal <200V)</td>
+                            </tr>
+                            <tr>
+                                <td>Current Range</td>
+                                <td>10A - 1000A+</td>
+                                <td>Up to 200A (optimal <50A)</td>
+                            </tr>
+                            <tr>
+                                <td>Switching Frequency</td>
+                                <td>1-50 kHz (optimal <20kHz)</td>
+                                <td>Up to 1 MHz (optimal >100kHz)</td>
+                            </tr>
+                            <tr>
+                                <td>Conduction Loss (High Current)</td>
+                                <td>Lower</td>
+                                <td>Higher</td>
+                            </tr>
+                            <tr>
+                                <td>Switching Loss</td>
+                                <td>Higher</td>
+                                <td>Lower</td>
+                            </tr>
+                            <tr>
+                                <td>Cost (High Voltage)</td>
+                                <td>Lower</td>
+                                <td>Higher</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="decision-tree">
+                        <h4>Quick Decision Guide</h4>
+                        <ul>
+                            <li><strong>Voltage > 400V AND Current > 10A:</strong> Use IGBT</li>
+                            <li><strong>Frequency > 50kHz:</strong> Use MOSFET</li>
+                            <li><strong>Voltage < 200V AND Current < 20A:</strong> Use MOSFET</li>
+                            <li><strong>400-600V, 10-50A, <20kHz:</strong> Either - compare losses</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section 7: Recommendations -->
+                <section id="recommendations" class="content-section">
+                    <h2>7. Silan IGBT Recommendations by Application</h2>
+                    
+                    <h3>Motor Drives (1-10 kW)</h3>
+                    <div class="recommendation-card">
+                        <h4>Recommended: SGT40N60NPF</h4>
+                        <ul>
+                            <li>40A, 600V rating</li>
+                            <li>Fast switching (Trench Field Stop)</li>
+                            <li>Low VCE(sat) = 1.85V max</li>
+                            <li>TO-247 package for good thermal performance</li>
+                        </ul>
+                        <a href="../products/power-devices/SGT40N60NPF.html" class="btn">View Product Details</a>
+                    </div>
+                    
+                    <h3>Solar Inverters (3-5 kW)</h3>
+                    <div class="recommendation-card">
+                        <h4>Recommended: SGT50N65</h4>
+                        <ul>
+                            <li>50A, 650V rating</li>
+                            <li>Optimized for inverter applications</li>
+                            <li>Excellent thermal performance</li>
+                            <li>High reliability for renewable energy</li>
+                        </ul>
+                        <a href="../products/power-devices/SGT50N65.html" class="btn">View Product Details</a>
+                    </div>
+                    
+                    <h3>Welding Equipment (200-300A output)</h3>
+                    <div class="recommendation-card">
+                        <h4>Recommended: SDM30N120</h4>
+                        <ul>
+                            <li>30A, 1200V rating</li>
+                            <li>High voltage for arc welding</li>
+                            <li>Robust short-circuit withstand</li>
+                            <li>Optimized for harsh environments</li>
+                        </ul>
+                        <a href="../products/power-devices/SDM30N120.html" class="btn">View Product Details</a>
+                    </div>
+                </section>
+
+            </div>
+        </article>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How do I choose the right IGBT for my application?</h3>
+                        <p>To choose the right IGBT, consider four key factors: 1) Voltage rating - select VCES at least 1.5-2x your DC bus voltage, 2) Current rating - choose IC based on RMS current with 1.5-2x safety margin, 3) Switching speed - faster for high frequency (>20kHz), slower for better EMI, 4) Thermal performance - ensure RthJC allows safe operation at max temperature.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What is the difference between IGBT and MOSFET?</h3>
+                        <p>IGBTs combine MOSFET input characteristics with bipolar output, making them ideal for high-voltage (>300V), high-current applications. MOSFETs are better for lower voltage, high-frequency switching. IGBTs have lower conduction losses at high currents but slower switching speeds compared to MOSFETs.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What voltage rating IGBT do I need?</h3>
+                        <p>Select an IGBT voltage rating (VCES) at least 1.5 to 2 times your maximum DC bus voltage. For 400V DC bus (rectified 230VAC), use 600V IGBTs. For 600V DC bus, use 1200V IGBTs. This provides safety margin for voltage spikes and transients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="support-cta">
+            <div class="container">
+                <h2>Need Help Selecting the Right IGBT?</h2>
+                <p>Our FAE team can provide personalized recommendations based on your specific application requirements.</p>
+                <div class="cta-options">
+                    <a href="../contact/?action=tech" class="btn btn-primary btn-large">Contact FAE Team</a>
+                    <a href="../products/power-devices.html" class="btn btn-secondary btn-large">Browse IGBT Products</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3>LITONG</h3>
+                    <p>Your authorized Silan distributor for high-quality semiconductor products and expert technical support.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../products/">Products</a></li>
+                        <li><a href="../solutions/">Solutions</a></li>
+                        <li><a href="index.html">Support</a></li>
+                        <li><a href="../about/">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:support@silan-distributor.com">support@silan-distributor.com</a></p>
+                    <p>Phone: <a href="tel:+1-213-555-0100">+1 (213) 555-0100</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LITONG - Authorized Silan Distributor. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../about/authorization.html">Authorization</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

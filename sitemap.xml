@@ -89,6 +89,21 @@
     <priority>0.64</priority>
   </url>
   <url>
+    <loc>https://silan.elec-distributor.com/support/igbt-selection-guide.html</loc>
+    <priority>0.80</priority>
+    <lastmod>2026-04-22</lastmod>
+  </url>
+  <url>
+    <loc>https://silan.elec-distributor.com/products/power-devices/SGT40N60NPF.html</loc>
+    <priority>0.80</priority>
+    <lastmod>2026-04-22</lastmod>
+  </url>
+  <url>
+    <loc>https://silan.elec-distributor.com/products/mcu/SC32F10.html</loc>
+    <priority>0.80</priority>
+    <lastmod>2026-04-22</lastmod>
+  </url>
+  <url>
     <loc>https://silan.elec-distributor.com/news/industry-trends-2025.html</loc>
     <priority>0.64</priority>
   </url>
